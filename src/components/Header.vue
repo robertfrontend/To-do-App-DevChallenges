@@ -1,6 +1,6 @@
 <template>
   <div id="nav">
-    <h1>{{ $store.state.nameApp }}</h1>
+    <h1> <b>{{ $store.state.nameApp }}</b> </h1>
     <header>
       <section>
         <div>

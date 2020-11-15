@@ -1,20 +1,20 @@
 <template>
   <div class="all">
     <div class="to-do" v-for="tarea in $store.state.tareas" :key="tarea.id">
-      <label class="container">
-        <input
-          type="checkbox"
-          :id="tarea.id"
-          :value="tarea.id"
-          v-model="checkbox[tarea.id]"
-          @click="selectCheck(tarea.id)"
-        />
-        <template v-if="tarea.status === false">
-          <span class="inactivo">{{ tarea.name }}</span>
-        </template>
-        <span v-if="tarea.status != false">{{ tarea.name }}</span>
-        <div class="checkmark"></div>
-      </label>
+        <label class="container">
+          <input
+            type="checkbox"
+            :id="tarea.id"
+            :value="tarea.id"
+            v-model="checkbox[tarea.id]"
+            @click="selectCheck(tarea.id)"
+          />
+          <template v-if="tarea.status === false">
+            <span class="inactivo">{{ tarea.name }}</span>
+          </template>
+          <span v-if="tarea.status != false">{{ tarea.name }}</span>
+          <div class="checkmark"></div>
+        </label>
     </div>
   </div>
 </template>
